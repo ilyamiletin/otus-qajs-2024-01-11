@@ -1,3 +1,4 @@
-import myFunction from './module.js'
+import { greet, farewell } from './modules.js'
 
-console.log(myFunction('Ильёй'))
+console.log(greet('World'))
+console.log(farewell('World'))

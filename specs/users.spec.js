@@ -21,6 +21,8 @@ describe('Users', () => {
     const responseToken = await AuthService.generateToken(newUser)
     token = responseToken.data.token
 
+    console.log(token)
+
     const { data: authorizedAfterLogin } = await AuthService.authorized(newUser)
 
     expect(authorizedBeforeLogin).toBe(false)

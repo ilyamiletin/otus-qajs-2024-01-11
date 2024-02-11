@@ -124,7 +124,7 @@ describe ('fullTrim function', () => {
 
   it ('testCasesNegative: invalid format (nonexistent variable)' , () => {
     try {
-      const text = dfgh
+      const text = 'dfgh'
 
       fullTrim(text)
 

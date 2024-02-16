@@ -17,9 +17,7 @@ const getBooks = async () => {
 }
 
 const addBook = async ({ userId, isbn, token }) => {
-  const response =  await client.put(`/BookStore/v1/Books/${userId}`, {
-    userId,
-    isbn,
+  const response =  await client.put(`/BookStore/v1/Books/${userId}`, {userId, isbn}, {
     headers: {
         Authorization: `Bearer ${token}`,
       }
@@ -38,8 +36,7 @@ const addListOfBooks = async ({ userId, isbns, token }) => {
     collectionOfIsbns: isbns.map(isbn => ({ isbn })),
   }
 
-  const response = await client.post('/BookStore/v1/Books', {
-    payload,
+  const response = await client.post('/BookStore/v1/Books', payload, {
     headers: {
         Authorization: `Bearer ${token}`,
       },

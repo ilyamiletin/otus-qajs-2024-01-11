@@ -4,9 +4,9 @@ import { config } from '../config'
 const client = axios.create({
     baseURL: config.baseURL,
     validateStatus: () => true,
-  })
+})
 
-const generateToken = async ({userName, password}) => {
+const generateToken = async ({ userName, password }) => {
     const response = await client.post('/Account/v1/GenerateToken', {
         userName,
         password,
@@ -22,7 +22,7 @@ const generateToken = async ({userName, password}) => {
 const authorized = async ({ userName, password }) => {
     const response = await client.post('/Account/v1/Authorized', {
         userName,
-        password
+        password,
     })
     return {
         headers: response.headers,
@@ -32,6 +32,6 @@ const authorized = async ({ userName, password }) => {
 }
 
 export default {
-  generateToken,
-  authorized,
+    generateToken,
+    authorized,
 }

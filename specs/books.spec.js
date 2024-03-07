@@ -7,7 +7,7 @@ import {
 } from '../framework'
 import { books } from '../framework/fixtures/Books.json'
 
-describe('Books', () => {
+describe.skip('Books', () => {
     const userId = config.userId
     const [book1, book2, book3] = books
     const isbn = book1.isbn

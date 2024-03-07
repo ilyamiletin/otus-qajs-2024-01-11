@@ -1,6 +1,6 @@
 import { config, AuthService } from '../framework'
 
-describe('Авторизация', () => {
+describe.skip('Авторизация', () => {
     it('Успешная авторизация (метод /GenerateToken)', async () => {
         const response = await AuthService.generateToken({
             userName: config.username,

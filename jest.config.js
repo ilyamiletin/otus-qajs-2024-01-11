@@ -9,7 +9,7 @@ const config = {
             'jest-html-reporters',
             {
                 publicPath: './html-report',
-                filename: 'report.html',
+                filename: 'index.html',
                 openReport: true,
             },
         ],
